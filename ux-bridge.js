@@ -4,7 +4,7 @@
    ② 화면 이동 · 스크롤을 부모(쉘)에 알려 두 화면이 같이 움직이게 한다. */
 (function () {
   if (window.parent === window) return;
-  var VARIANT = /^\/tobe\//.test(location.pathname) ? 'tobe' : 'asis';
+  var VARIANT = /\/tobe\/tobe-/.test(location.pathname) ? 'tobe' : 'asis';
   var COLOR = VARIANT === 'asis' ? '#C4553F' : '#3FAFD3';
   var KEYS = { '/': 'home', '/goal/score': 'goal-score', '/completeness': 'completeness', '/care/식단': 'care', '/care/영양': 'care', '/care/스킨케어': 'care', '/care/배변': 'care', '/care/회복': 'care', '/record/diet/add': 'diet-add' };
   function pageKey() {
